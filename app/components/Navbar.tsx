@@ -98,7 +98,7 @@ const sharedTransition = {
 function MenuBar(): React.JSX.Element {
   const path = usePathname()
   const {user} = useUser();
-  console.log(user)
+
   const {theme, setTheme} = useTheme();
 
 
