@@ -1,9 +1,11 @@
 import { verifyWebhook } from '@clerk/nextjs/webhooks'
 import { NextRequest } from 'next/server'
+import type { WebhookEvent } from "@clerk/nextjs/server";
+
 
 export async function POST(req: NextRequest) {
   try {
-    const evt = await verifyWebhook(req)
+   const evt = await verifyWebhook(req) as WebhookEvent;
 
     // Do something with payload
     // For this guide, log payload to console
